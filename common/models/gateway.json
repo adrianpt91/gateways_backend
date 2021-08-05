@@ -1,0 +1,36 @@
+{
+  "name": "gateway",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "serial": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "validip": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "devices": {
+      "type": "hasMany",
+      "model": "device",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

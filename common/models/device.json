@@ -1,0 +1,40 @@
+{
+  "name": "device",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created_at",
+      "updatedAt": "updated_at",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "uid": {
+      "type": "number",
+      "required": true
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "gateway": {
+      "type": "belongsTo",
+      "model": "gateway",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

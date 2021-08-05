@@ -1,0 +1,8 @@
+{
+  "ds": {
+    "name": "ds",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  }
+}
